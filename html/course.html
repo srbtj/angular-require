@@ -1,0 +1,17 @@
+
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 left_padding">
+    <ul class="nav navbar-collapse">
+        <!--<li ng-class="{course_active:courseActive(routeMap.chinese)}"><a ui-sref=".chinese">语文</a> </li>-->
+        <!--<li ng-class="{course_active:courseActive(routeMap.math)}"><a ui-sref=".math">数学</a> </li>-->
+        <!--<li ng-class="{course_active:courseActive(routeMap.english)}"><a ui-sref=".english">英语</a> </li>-->
+
+        <li ng-class="{ 'course_active' : $state.includes('course.chinese')}"><a ui-sref=".chinese">语文</a></li>
+        <li ng-class="{ 'course_active' : $state.includes('course.math')}"><a ui-sref=".math">数学</a></li>
+        <li ng-class="{ 'course_active' : $state.includes('course.english')}"><a ui-sref=".english">英语</a></li>
+        <li ng-class="{ 'course_active' : $state.includes('course.table')}"><a ui-sref=".table">table</a></li>
+        <li ng-class="{ 'course_active' : $state.includes('course.angular')}"><a ui-sref=".angular">Angular</a> </li>
+        <li ng-class="{ 'course_active' : $state.includes('course.form')}"><a ui-sref=".form">form</a> </li>
+        <li ng-class="{ 'course_active' : $state.includes('course.animation')}"><a ui-sref=".animation">animation</a> </li>
+    </ul>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-8 right_padding" ui-view></div>

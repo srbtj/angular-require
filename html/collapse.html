@@ -1,0 +1,21 @@
+<p class="alert alert-warning">Collapse example</p>
+<a class="btn btn-success" role="button" data-toggle="collapse" href="/#baseCollapse" aria-expanded="false">base collapse</a>
+<div class="collapse" id="baseCollapse">
+    <div class="well">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+        non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+        wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+</div>
+<p class="alert alert-info" style="margin-top: 15px;">自定义指令 : myCollapse</p>
+<a role="button" class="btn btn-info" ng-click="isOpen = !isOpen">自定义指令</a>
+<div class="collapse" my-collapse="isOpen">
+    <div class="well">自定义指令内容!!!</div>
+</div>
+<hr>
+<a role="button" class="btn btn-warning" ng-click="isClose = !isClose">自定义指令2</a>
+<div class="collapse" my-collapse="isClose">
+    <div class="well">自定义指令内容22!!!</div>
+</div>

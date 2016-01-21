@@ -1,0 +1,13 @@
+<div class="panel" ng-class="panelClass || 'panel-default'">
+    <div class="panel-heading" ng-keypress="toggleOpen($event)">
+        <h3 class="panel-title">
+            <a href ng-click="toggleOpen()">
+                <span ng-class="{'text-muted':isDisabled}">{{ heading }}</span>
+            </a>
+            <a href ng-click="deleteItem()" class="pull-right">删除</a>
+        </h3>
+    </div>
+    <div class="panel-collapse collapse" my-collapse="!isOpen">
+        <div class="panel-body" ng-transclude></div>
+    </div>
+</div>

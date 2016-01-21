@@ -1,0 +1,68 @@
+<p class="alert alert-success">angularjs animation demo</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" class="form-control" ng-model="name" placeholder="entry name">
+    </div>
+    <div class="col-md-2"><button type="button" class="btn btn-success" ng-click="addData()">添加数据</button></div>
+    <div class="col-md-2"><button type="button" class="btn btn-success" ng-click="removeData()">删除数据</button></div>
+
+
+</div>
+
+<ul class="list">
+    <li class="li" ng-repeat="d in data | filter : name as result">{{$index+1}} : {{ d.name }}</li>
+    <li class="li" ng-if="result.length === 0">
+        <strong>no result found </strong>
+    </li>
+</ul>
+
+<p class="alert alert-info">another angular animation demo</p>
+<div ng-init="friends = [
+  {name:'John', age:25, gender:'boy'},
+  {name:'Jessie', age:30, gender:'girl'},
+  {name:'Johanna', age:28, gender:'girl'},
+  {name:'Joy', age:15, gender:'girl'},
+  {name:'Mary', age:28, gender:'girl'},
+  {name:'Peter', age:95, gender:'boy'},
+  {name:'Sebastian', age:50, gender:'boy'},
+  {name:'Erika', age:27, gender:'girl'},
+  {name:'Patrick', age:40, gender:'boy'},
+  {name:'Samantha', age:60, gender:'girl'}
+]">
+    I have {{friends.length}} friends. They are:
+    <input type="search" ng-model="q" placeholder="filter friends..." />
+    <ul class="example-animate-container">
+        <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results">
+            [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+        </li>
+        <li class="animate-repeat" ng-if="results.length == 0">
+            <strong>No results found...</strong>
+        </li>
+    </ul>
+</div>
+
+<p class="alert alert-warning">ng-switch animation</p>
+<select ng-model="selection" ng-options="item for item in items">
+</select>
+<span>selection={{selection}}</span>
+<hr/>
+<div class="animate-switch-container"
+     ng-switch on="selection">
+    <div class="animate-switch" ng-switch-when="settings">Settings Div</div>
+    <div class="animate-switch" ng-switch-when="home">Home Span</div>
+    <div class="animate-switch" ng-switch-default>default</div>
+</div>
+<p class="alert alert-info">ngClass animation</p>
+<p ng-class="{strike: deleted, bold: important, red: error}">Map Syntax Example</p>
+<input type="checkbox" ng-model="deleted"> deleted (apply "strike" class)<br>
+<input type="checkbox" ng-model="important"> important (apply "bold" class)<br>
+<input type="checkbox" ng-model="error"> error (apply "red" class)
+<hr>
+<p ng-class="style">Using String Syntax</p>
+<input type="text" ng-model="style" placeholder="Type: bold strike red">
+<hr>
+<p ng-class="[style1, style2, style3]">Using Array Syntax</p>
+<input ng-model="style1" placeholder="Type: bold, strike or red"><br>
+<input ng-model="style2" placeholder="Type: bold, strike or red"><br>
+<input ng-model="style3" placeholder="Type: bold, strike or red"><br>

@@ -1,0 +1,115 @@
+<p class="alert alert-warning">form demo</p>
+<div class="panel panel-info">
+    <div class="panel-heading panel-info">Form inline-block</div>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" class="form-control" placeholder="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input class="form-control" id="password" name="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <div class="btn btn-success">submit</div>
+            </div>
+        </form>
+        <br>
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="email">email</label>
+                <input type="email" class="form-control" id="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="address">address</label>
+                <input type="text" class="form-control" id="address" placeholder="address">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">submit</button>
+            </div>
+        </form>
+        <br>
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="money">money</label>
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="money"  placeholder="money" name="money">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">&nbsp;checked me
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading"><h2 class="panel-title">Form horizontal</h2></div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-2 control-label">username</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="username" placeholder="entry username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">password</label>
+                <div class="col-md-8">
+                    <input type="password" class="form-control" name="password" placeholder="entry password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-8">
+                    <button type="submit" class="btn btn-success">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-warning">
+    <div class="panel-heading"><h3 class="panel-title">反馈图标 has-feedback</h3></div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group has-success has-feedback">
+                <label class="control-label col-md-2">date</label>
+                <div class="col-md-8">
+                    <input type="date" name="date" class="form-control" aria-describedby="dateState">
+                    <span class="glyphicon glyphicon-plus form-control-feedback"></span>
+                    <span class="sr-only" id="dateState">plus</span>
+                </div>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label class="control-label col-md-2">address</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="address" aria-describedby="inputWarningState">
+                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                    <span class="sr-only" id="inputWarningState">warning</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-success">
+    <div class="panel-heading"><h3>辅助文本</h3></div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-3" for="help">help text</label>
+                <div class="col-md-8">
+                    <input type="text" id="help" name="help" class="form-control" aria-describedby="helpState">
+                </div>
+                <span id="helpState" class="help-block col-md-offset-3 col-md-8 text-success">this is help block</span>
+            </div>
+        </form>
+    </div>
+</div>

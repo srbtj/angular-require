@@ -1,0 +1,12 @@
+<div class="col-lg-9 col-md-9 col-sm-7 col-xs-7" ui-view=""></div>
+<div class="col-lg-3 col-md-3 col-sm-5 col-xs-5">
+    <ul class="nav navbar-collapse">
+        <!--<li ng-class="{course_active : jsActive(routeMap.collapse)}"><a ui-sref=".collapse">Collapse</a> </li>-->
+        <!--<li ng-class="{course_active : jsActive(routeMap.accordions)}"><a ui-sref=".accordions">Accordions</a> </li>-->
+        <!--<li ng-class="{course_active : jsActive(routeMap.pagination)}"><a ui-sref=".pagination">Pagination</a> </li>-->
+
+        <li ng-class="{course_active : $state.includes('work.collapse')}"><a ui-sref=".collapse">Collapse</a> </li>
+        <li ng-class="{course_active : $state.includes('work.accordions')}"><a ui-sref=".accordions">Accordions</a> </li>
+        <li ng-class="{course_active : $state.includes('work.pagination')}"><a ui-sref=".pagination">Pagination</a> </li>
+    </ul>
+</div>

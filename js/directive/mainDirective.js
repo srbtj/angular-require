@@ -1,0 +1,1 @@
+define(['./myPaging','./myCollapseDirective','./myAccordionDirective','./myPaginationDirective'],function(){});

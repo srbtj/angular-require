@@ -1,0 +1,25 @@
+<p class="alert alert-info">angular demo</p>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        angular directive : input
+    </div>
+    <div class="panel-body">
+        <form name="inputForm">
+            value1:<input type="checkbox" ng-model="input.value1"><br>
+            value2:<input type="checkbox" ng-model="input.value2" ng-true-value="'YES'" ng-false-value="'NO'">
+            <p>value1:{{ input.value1 }}&nbsp;&nbsp; value2:{{ input.value2 }}</p>
+            Pick a date : <input type="date" ng-model="input.date" name="date" ng-required
+                                 min="2015-01-01" max="2016-12-31"
+                                 placeholder="yyyy-MM-dd">
+            <span class="has-error" ng-show="inputForm.date.$error.required">Required!</span>
+            <span class="has-error" ng-show="inputForm.data.$error.date">
+                not a valid date!
+            </span>
+            <span>value : {{ input.date | date:'yyyy-MM-dd'}}</span>
+
+            <br><button type="submit" role="button" class="btn btn-success">submit</button>
+        </form>
+    </div>
+</div>
+
+

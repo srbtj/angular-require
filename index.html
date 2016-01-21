@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJs Demo</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/init.css" rel="stylesheet">
+</head>
+<body>
+<!--<div class="container">-->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a ui-sref="/" class="navbar-brand">AngularJs Demo</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <!--<li ng-class="{active:isActive(routeMap.index)}"><a ui-sref="/">首页</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.student)}"><a ui-sref="student">学员</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.course)}"><a ui-sref="course">课程</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.about)}"><a ui-sref="about">关于</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.message)}"><a ui-sref="message">留言</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.work)}"><a ui-sref="work">Work</a> </li>-->
+                    <!--<li ng-class="{active:isActive(routeMap.team)}"><a ui-sref="team">Team</a> </li>-->
+
+                    <li ng-class="{'active':$state.includes('/')}"><a ui-sref="/">首页</a> </li>
+                    <li ng-class="{'active':$state.includes('student')}"><a ui-sref="student">学员</a> </li>
+                    <li ng-class="{'active':$state.includes('course')}"><a ui-sref="course">课程</a> </li>
+                    <li ng-class="{'active':$state.includes('about')}"><a ui-sref="about">关于</a> </li>
+                    <li ng-class="{'active':$state.includes('message')}"><a ui-sref="message">留言</a> </li>
+                    <li ng-class="{'active':$state.includes('work')}"><a ui-sref="work">Work</a> </li>
+                    <li ng-class="{'active':$state.includes('team')}"><a ui-sref="team">Team</a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div ui-view class="row"></div>
+    </div>
+    <footer class="footer text-center">
+        <div>
+            <a ui-sref="/" class="active">
+                <span>首页</span>
+                <span>首页</span>
+            </a>
+            <a ui-sref="/">
+                <span>在线留言</span>
+                <span>在线留言</span>
+            </a>
+            <a ui-sref="/">
+                <span>联系我们</span>
+                <span>联系我们</span>
+            </a>
+        </div>
+        <div>2</div>
+    </footer>
+<script src="./js/common/require.js" data-main="./js/main"></script>
+</body>
+</html>

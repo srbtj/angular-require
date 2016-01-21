@@ -1,0 +1,93 @@
+define(['angular','app'],function(angular,app){
+    'use strict';
+    return app.run(['$rootScope','$state','$stateParams',function($rootScope,$state,$stateParams){
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    }]).config(['$stateProvider','$urlRouterProvider','$locationProvider','$uiViewScrollProvider',
+        function($stateProvider,$urlRouterProvider,$locationProvider,$uiViewScrollProvider){
+            $uiViewScrollProvider.useAnchorScroll();
+
+            $urlRouterProvider
+                .when('/course','/course/chinese')
+                .when('/work','/work/collapse')
+                .otherwise('/');
+
+            $stateProvider
+                .state('/',{
+                    url:'/',
+                    templateUrl:'./html/main.html'
+                })
+                .state('student',{
+                    url:'/student',
+                    templateUrl:'./html/student.html'
+                })
+                .state('course',{
+                    url:'/course',
+                    templateUrl:'./html/course.html',
+                    controller:'CourseController'
+                })
+                .state('course.chinese',{
+                    url:'/chinese',
+                    templateUrl:'./html/chinese.html'
+                })
+                .state('course.english',{
+                    url:'/english',
+                    templateUrl:'./html/english.html'
+                })
+                .state('course.math',{
+                    url:'/math',
+                    templateUrl:'./html/math.html'
+                })
+                .state('course.table',{
+                    url:'/table',
+                    templateUrl:'./html/table.html'
+                })
+                .state('course.angular',{
+                    url:'/angular',
+                    templateUrl:'./html/angular.html',
+                    controller:'AngularController'
+                })
+                .state('course.form',{
+                    url:'/form',
+                    templateUrl:'./html/form.html'
+                })
+                .state('course.animation',{
+                    url:'/animation',
+                    templateUrl:'./html/animation.html',
+                    controller:'AnimationController'
+                })
+                .state('about',{
+                    url:'/about',
+                    templateUrl:'./html/about.html'
+                })
+                .state('work',{
+                    url:'/work',
+                    templateUrl:'./html/work.html',
+                    controller:'WordController'
+                })
+                .state('work.collapse',{
+                    url:'/collapse',
+                    templateUrl:'./html/collapse.html',
+                    controller:'CollapseController'
+                })
+                .state('work.accordions',{
+                    url:'/accordions',
+                    templateUrl:'./html/accordion.html',
+                    controller:'AccordionController'
+                })
+                .state('work.pagination',{
+                    url:'/pagination',
+                    templateUrl:'./html/pagination.html',
+                    controller:'PaginationController'
+                })
+                .state('team',{
+                    url:'/team',
+                    templateUrl:'./html/team.html'
+                })
+                .state('message',{
+                    url:'/message',
+                    templateUrl: './html/message.html'
+                });
+        }
+    ]);
+});
